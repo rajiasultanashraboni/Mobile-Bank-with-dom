@@ -45,3 +45,31 @@ document.getElementById('cashout-button').addEventListener('click',function(even
         alert('failed.please try again later')
     }
 })
+
+// button toggle is here
+
+//add money button 
+
+document.getElementById('show-cash-out').addEventListener('click',function(){
+    // console.log('show add money')
+
+    //toggle button
+    document.getElementById("show-cash-out").classList.add('bg-green-400')
+    document.getElementById("show-add-money").classList.remove('bg-green-400')
+
+
+    //hidden
+    document.getElementById('cashout-money-form').classList.remove('hidden')
+    document.getElementById('add-money-form').classList.add('hidden')
+})
+
+// cash out button 
+
+document.getElementById('show-add-money').addEventListener('click',function(){
+    // console.log('show add money')
+    document.getElementById("show-add-money").classList.add('bg-green-400')
+    document.getElementById("show-cash-out").classList.remove('bg-green-400')
+    
+    document.getElementById('add-money-form').classList.remove('hidden')
+    document.getElementById('cashout-money-form').classList.add('hidden')
+})
